@@ -128,7 +128,7 @@ end
 
 
 local function sendNewMailToOffline(citizenid, mailData)
-    local Player = QBCore.Functions.GetPlayerByCitizenId(citizenid)
+    local xPlayer = ESX.GetPlayerFromIdentifier(citizenid)
     if Player then
         local src = Player.PlayerData.source
         if mailData.button == nil then
